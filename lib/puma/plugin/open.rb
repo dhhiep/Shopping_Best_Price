@@ -1,4 +1,6 @@
-require "puma/plugin"
+# frozen_string_literal: true
+
+require 'puma/plugin'
 
 Puma::Plugin.create do
   def start(launcher)
@@ -8,7 +10,7 @@ Puma::Plugin.create do
     binding = launcher.options[:binds].grep(/^tcp|ssl/).first
     return if binding.nil?
 
-    url = binding.sub(/^tcp/, "http").sub(/^ssl/, "https").sub("0.0.0.0", "localhost")
+    url = binding.sub(/^tcp/, 'http').sub(/^ssl/, 'https').sub('0.0.0.0', 'localhost')
     Launchy.open(url)
   end
 end
