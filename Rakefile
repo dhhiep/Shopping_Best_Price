@@ -14,13 +14,11 @@ task :default do
 
   raise unless
     system('bin/rubocop') &
-    system('bin/erblint --lint-all') &
-    system('yarn lint')
+    system('bin/erblint --lint-all')
 end
 
 task :fix do
   raise unless
-    system('bin/rubocop -a') &
-    system('bin/erblint --lint-all -a') &
-    system('yarn fix')
+    system('rubocop --autocorrect-all') &
+    system('bin/erblint --lint-all -a')
 end

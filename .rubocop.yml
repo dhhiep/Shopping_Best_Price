@@ -32,9 +32,12 @@ AllCops:
     - 'bin/*'
   TargetRubyVersion: 3.2
   SuggestExtensions:
-      rubocop-rspec: true
-      rubocop-rails: true
-      rubocop-capybara: true
+    rubocop-rails: true
+    rubocop-rspec: true
+    rubocop-capybara: true
+    rubocop-minitest: true
+    rubocop-performance: true
+    rubocop-factory_bot: true
 
 Layout/LineLength:
   Description: 'Checks that line length does not exceed the configured limit.'

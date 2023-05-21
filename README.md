@@ -28,7 +28,7 @@ Run the `bin/setup` script. This script will:
 * Create a `.env.development` file
 * Create, migrate, and seed the database
 
-### Run it!
+### Run it
 
 1. Run `bin/rake` to run all tests and lint checks.
 2. Start the app with `yarn start`

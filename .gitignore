@@ -36,3 +36,6 @@
 
 # Ignore locally-installed gems.
 /vendor/bundle/
+
+# Node packages
+node_modules/
